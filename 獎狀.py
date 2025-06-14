@@ -9,8 +9,8 @@ name = st.text_input("請輸入你的名字：", "")
 
 if name:
     # 載入底圖與字型
-    bg = Image.open("assets/Certificate.png").convert("RGBA")
-    font = ImageFont.truetype("assets/NotoSerifTC-VariableFont_wght.ttf", size=60)
+    bg = Image.open("Certificate.png").convert("RGBA")
+    font = ImageFont.truetype("NotoSerifTC-VariableFont_wght.ttf", size=60)
     draw = ImageDraw.Draw(bg)
 
     # 將名字置中寫上
