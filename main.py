@@ -5,7 +5,7 @@ import datetime
 
 # UI：標題與輸入框
 st.title("🏅 陽明交大研究感謝狀")
-name = st.text_input("請輸入你的名字：", "")
+name = st.text_input("請輸入您的名字：", "")
 
 if name:
     # 載入底圖與字型
@@ -21,7 +21,7 @@ if name:
     draw.text((x, y), name, fill="black", font=font)
 
     # 顯示預覽
-    st.image(bg, caption="🎉 恭喜獲得獎狀！", use_container_width=True)
+    st.image(bg, caption="🎉 謝謝您認真參與研究，恭喜您獲得獎狀！", use_container_width=True)
 
     # 提供下載按鈕
     buf = io.BytesIO()
@@ -29,6 +29,6 @@ if name:
     st.download_button(
         label="📥 下載我的獎狀",
         data=buf.getvalue(),
-        file_name=f"感謝狀_{name}.png",
+        file_name=f"第一週感謝狀_{name}.png",
         mime="image/png"
     )
