@@ -10,14 +10,14 @@ name = st.text_input("請輸入你的名字：", "")
 if name:
     # 載入底圖與字型
     bg = Image.open("1.png").convert("RGBA")
-    font = ImageFont.truetype("NotoSerifTC-VariableFont_wght.ttf", size=60)
+    font = ImageFont.truetype("NotoSerifTC-VariableFont_wght.ttf", size=80)
     draw = ImageDraw.Draw(bg)
 
     # 將名字置中寫上
     bbox = draw.textbbox((0, 0), name, font=font)
     text_width = bbox[2] - bbox[0]
     x = (bg.width - text_width) / 2
-    y = 1000  # 視你的圖設計，調整 Y 軸
+    y = 580  # 視你的圖設計，調整 Y 軸
     draw.text((x, y), name, fill="black", font=font)
 
     # 顯示預覽
