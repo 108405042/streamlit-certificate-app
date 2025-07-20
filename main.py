@@ -9,7 +9,7 @@ name = st.text_input("請輸入您的名字：", "")
 
 if name:
     # 載入底圖與字型
-    bg = Image.open("2.png").convert("RGBA")
+    bg = Image.open("3.png").convert("RGBA")
     font = ImageFont.truetype("NotoSerifTC-VariableFont_wght.ttf", size=80)
     draw = ImageDraw.Draw(bg)
 
@@ -21,7 +21,7 @@ if name:
     draw.text((x, y), name, fill="black", font=font)
 
     # 顯示預覽
-    st.image(bg, caption="🎉 研究有您參與真好，恭喜您獲得獎狀！", use_container_width=True)
+    st.image(bg, caption="🎉 為辛苦的您送上獎狀！", use_container_width=True)
 
     # 提供下載按鈕
     buf = io.BytesIO()
@@ -29,6 +29,6 @@ if name:
     st.download_button(
         label="📥 下載我的獎狀",
         data=buf.getvalue(),
-        file_name=f"第二週感謝狀_{name}.png",
+        file_name=f"第三週感謝狀_{name}.png",
         mime="image/png"
     )
